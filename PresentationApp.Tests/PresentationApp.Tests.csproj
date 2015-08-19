@@ -48,10 +48,14 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="BasicMathTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataManipulation\DataManipulation.csproj">
+      <Project>{4d8b560d-c76a-4616-8bc3-f93a1f55c869}</Project>
+      <Name>DataManipulation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PresentationApp\PresentationApp.csproj">
       <Project>{5B74ADFC-3687-4805-B46D-E35D26A4F068}</Project>
       <Name>PresentationApp</Name>
