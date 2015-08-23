@@ -122,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DataTypesExamplesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PresentationsController.cs" />
     <Compile Include="Controllers\ResultsController.cs" />
@@ -140,7 +141,7 @@
     <Compile Include="Models\DataTypesExample.cs" />
     <Compile Include="Models\IExample.cs" />
     <Compile Include="Models\Presentation.cs" />
-    <Compile Include="Models\PresentationContext.cs" />
+    <Compile Include="Models\PresentationDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -150,10 +151,15 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Presentations\Create.cshtml" />
     <Content Include="Views\Presentations\Delete.cshtml" />
-    <Content Include="Views\Presentations\Details.cshtml" />
     <Content Include="Views\Presentations\Edit.cshtml" />
     <Content Include="Views\Presentations\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\DataTypesExamples\Create.cshtml" />
+    <Content Include="Views\DataTypesExamples\Delete.cshtml" />
+    <Content Include="Views\DataTypesExamples\Details.cshtml" />
+    <Content Include="Views\DataTypesExamples\Edit.cshtml" />
+    <Content Include="Views\DataTypesExamples\Index.cshtml" />
+    <Content Include="Views\DataTypesExamples\_DataTypesExamples.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

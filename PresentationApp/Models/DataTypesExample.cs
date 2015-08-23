@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -14,9 +15,7 @@ namespace PresentationApp.Models
         public double? SecondDouble { get; set; }
         public float? FirstFloat { get; set; }
         public float? SecondFloat { get; set; }
-        public char? FirstChar { get; set; }
-        public char? SecondChar { get; set; }
-        
+      
         // FK to Presentations
         public int PresentationId { get; set; }
     }

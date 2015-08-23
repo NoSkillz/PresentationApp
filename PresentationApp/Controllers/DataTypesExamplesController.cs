@@ -7,115 +7,117 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PresentationApp.Models;
-using DataManipulation.BasicFunctions;
 
 namespace PresentationApp.Controllers
 {
-    public class PresentationsController : Controller
+    public class DataTypesExamplesController : Controller
     {
         private PresentationDbContext db = new PresentationDbContext();
 
-        // GET: Presentations
-        public ActionResult Index()
+        // GET: DataTypesExamples
+        public ActionResult Index([Bind(Prefix = "Id")] int presentationId)
         {
-            return View(db.Presentations.ToList());
-        }
+            var presentation = db.Presentations.Find(presentationId);
 
-        // GET: Presentations/Details/5
-        public ActionResult Examples(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Presentation presentation = db.Presentations.Find(id);
-            if (presentation == null)
+            if(presentation == null)
             {
                 return HttpNotFound();
-            }
-            return RedirectToAction("Index", "DataTypesExamples", new { presentationId = id });
-        }
-
-        // GET: Presentations/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Presentations/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Description,Date")] Presentation presentation)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Presentations.Add(presentation);
-                db.SaveChanges();
-                return RedirectToAction("Index");
             }
 
             return View(presentation);
         }
 
-        // GET: Presentations/Edit/5
+        // GET: DataTypesExamples/Details/5
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            DataTypesExample dataTypesExample = db.Examples.Find(id);
+            if (dataTypesExample == null)
+            {
+                return HttpNotFound();
+            }
+            return View(dataTypesExample);
+        }
+
+        // GET: DataTypesExamples/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: DataTypesExamples/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "Id,FirstInteger,SecondInteger,FirstDouble,SecondDouble,FirstFloat,SecondFloat,PresentationId")] DataTypesExample dataTypesExample)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Examples.Add(dataTypesExample);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(dataTypesExample);
+        }
+
+        // GET: DataTypesExamples/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Presentation presentation = db.Presentations.Find(id);
-            if (presentation == null)
+            DataTypesExample dataTypesExample = db.Examples.Find(id);
+            if (dataTypesExample == null)
             {
                 return HttpNotFound();
             }
-            return View(presentation);
+            return View(dataTypesExample);
         }
 
-        // POST: Presentations/Edit/5
+        // POST: DataTypesExamples/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Presentation presentation)
+        public ActionResult Edit([Bind(Include = "Id,FirstInteger,SecondInteger,FirstDouble,SecondDouble,FirstFloat,SecondFloat,PresentationId")] DataTypesExample dataTypesExample)
         {
-            //if (ModelState.IsValid)
-            //{
-            //    db.Entry(presentation).State = EntityState.Modified;
-            //    db.SaveChanges();
-            //    return RedirectToAction("Index");
-            //}
-            //return View(presentation);
-            //var result = BasicMath.Addition(presentation, 3);
-
-            //return View();
-            return null;
+            if (ModelState.IsValid)
+            {
+                db.Entry(dataTypesExample).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(dataTypesExample);
         }
 
-        // GET: Presentations/Delete/5
+        // GET: DataTypesExamples/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Presentation presentation = db.Presentations.Find(id);
-            if (presentation == null)
+            DataTypesExample dataTypesExample = db.Examples.Find(id);
+            if (dataTypesExample == null)
             {
                 return HttpNotFound();
             }
-            return View(presentation);
+            return View(dataTypesExample);
         }
 
-        // POST: Presentations/Delete/5
+        // POST: DataTypesExamples/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Presentation presentation = db.Presentations.Find(id);
-            db.Presentations.Remove(presentation);
+            DataTypesExample dataTypesExample = db.Examples.Find(id);
+            db.Examples.Remove(dataTypesExample);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

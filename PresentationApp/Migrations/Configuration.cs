@@ -7,7 +7,7 @@ namespace PresentationApp.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<PresentationApp.Models.PresentationDb>
+    internal sealed class Configuration : DbMigrationsConfiguration<PresentationApp.Models.PresentationDbContext>
     {
         public Configuration()
         {
@@ -16,7 +16,7 @@ namespace PresentationApp.Migrations
             ContextKey = "PresentationApp.Models.PresentationDb";
         }
 
-        protected override void Seed(PresentationDb context)
+        protected override void Seed(PresentationDbContext context)
         {
             // Seed the presentations first
             context.Presentations.AddOrUpdate(
@@ -26,17 +26,24 @@ namespace PresentationApp.Migrations
                     Id = 1,
                     Name = "Test",
                     Description = "Desc",
-                    Date = DateTime.Now,
-                });
+                    Date = DateTime.Now
+                },
+                new Presentation
+                {
+                    Id = 2,
+                    Name = "Second Presentation",
+                    Description = "The description for the second presentation",
+                    Date = DateTime.Now
+                }
+                );
 
             // Then seed some examples and FK to them using PresentationId
             context.Examples.AddOrUpdate(
                 p => p.Id,
+                // Examples for the first presentation
                 new DataTypesExample
                 {
                     Id = 1,
-                    FirstChar = 'a',
-                    SecondChar = null,
                     FirstDouble = null,
                     SecondDouble = null,
                     FirstFloat = null,
@@ -48,8 +55,6 @@ namespace PresentationApp.Migrations
                 new DataTypesExample
                 {
                     Id = 2,
-                    FirstChar = null,
-                    SecondChar = null,
                     FirstDouble = null,
                     SecondDouble = null,
                     FirstFloat = null,
@@ -57,6 +62,18 @@ namespace PresentationApp.Migrations
                     FirstInteger = null,
                     SecondInteger = null,
                     PresentationId = 1
+                },
+                //Examples for the second presentation
+                new DataTypesExample
+                {
+                    Id = 3,
+                    FirstDouble = null,
+                    SecondDouble = null,
+                    FirstFloat = null,
+                    SecondFloat = null,
+                    FirstInteger = null,
+                    SecondInteger = null,
+                    PresentationId = 2
                 });
         }
 

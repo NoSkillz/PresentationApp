@@ -1,0 +1,74 @@
+﻿@model PresentationApp.Models.DataTypesExample
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DataTypesExample</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstInteger)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstInteger)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondInteger)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondInteger)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstDouble)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstDouble)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondDouble)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondDouble)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstFloat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstFloat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondFloat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondFloat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PresentationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PresentationId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

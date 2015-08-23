@@ -1,0 +1,38 @@
+﻿@model IEnumerable<PresentationApp.Models.DataTypesExample>
+
+
+<h2>Examples</h2>
+<div>
+    @foreach (var item in Model)
+    {
+        <div>
+            <h4>Example no: @item.Id</h4>
+            <div class="form-horizontal">
+                <div>
+                    @Html.LabelFor(modelItem => item.FirstInteger)
+                    @Html.EditorFor(modelItem => item.FirstInteger)
+                </div>
+                <div>
+                    @Html.LabelFor(modelItem => item.SecondInteger)
+                    @Html.EditorFor(modelItem => item.SecondInteger)
+                </div>
+                <div>
+                    @Html.LabelFor(modelItem => item.FirstFloat)
+                    @Html.EditorFor(modelItem => item.FirstFloat)
+                </div>
+                <div>
+                    @Html.LabelFor(modelItem => item.SecondFloat)
+                    @Html.EditorFor(modelItem => item.SecondFloat)
+                </div>
+                <div>
+                    @Html.LabelFor(modelItem => item.FirstDouble)
+                    @Html.EditorFor(modelItem => item.FirstDouble)
+                </div>
+                <div>
+                    @Html.LabelFor(modelItem => item.SecondDouble)
+                    @Html.EditorFor(modelItem => item.SecondDouble)
+                </div>
+            </div>
+        </div>
+    }
+</div>
