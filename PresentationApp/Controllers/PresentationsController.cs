@@ -13,7 +13,7 @@ namespace PresentationApp.Controllers
 {
     public class PresentationsController : Controller
     {
-        private PresentationContext db = new PresentationContext();
+        private PresentationDb db = new PresentationDb();
 
         // GET: Presentations
         public ActionResult Index()
@@ -88,9 +88,10 @@ namespace PresentationApp.Controllers
             //    return RedirectToAction("Index");
             //}
             //return View(presentation);
-            var result = BasicMath.Addition(presentation.someNumber, 3);
+            //var result = BasicMath.Addition(presentation, 3);
 
-            return View();
+            //return View();
+            return null;
         }
 
         // GET: Presentations/Delete/5

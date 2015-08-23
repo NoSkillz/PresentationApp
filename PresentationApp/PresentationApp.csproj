@@ -137,6 +137,8 @@
       <DependentUpon>201508181736508_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\DataTypesExample.cs" />
+    <Compile Include="Models\IExample.cs" />
     <Compile Include="Models\Presentation.cs" />
     <Compile Include="Models\PresentationContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

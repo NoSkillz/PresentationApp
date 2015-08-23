@@ -2,32 +2,23 @@ namespace PresentationApp.Migrations
 {
     using Models;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<PresentationApp.Models.PresentationContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<PresentationApp.Models.PresentationDb>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "PresentationApp.Models.PresentationContext";
+            AutomaticMigrationDataLossAllowed = true;
+            ContextKey = "PresentationApp.Models.PresentationDb";
         }
 
-        protected override void Seed(PresentationApp.Models.PresentationContext context)
+        protected override void Seed(PresentationDb context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            // Seed the presentations first
             context.Presentations.AddOrUpdate(
                 p => p.Id,
                 new Presentation
@@ -36,8 +27,38 @@ namespace PresentationApp.Migrations
                     Name = "Test",
                     Description = "Desc",
                     Date = DateTime.Now,
-                    someNumber = 1
+                });
+
+            // Then seed some examples and FK to them using PresentationId
+            context.Examples.AddOrUpdate(
+                p => p.Id,
+                new DataTypesExample
+                {
+                    Id = 1,
+                    FirstChar = 'a',
+                    SecondChar = null,
+                    FirstDouble = null,
+                    SecondDouble = null,
+                    FirstFloat = null,
+                    SecondFloat = null,
+                    FirstInteger = null,
+                    SecondInteger = null,
+                    PresentationId = 1
+                },
+                new DataTypesExample
+                {
+                    Id = 2,
+                    FirstChar = null,
+                    SecondChar = null,
+                    FirstDouble = null,
+                    SecondDouble = null,
+                    FirstFloat = null,
+                    SecondFloat = null,
+                    FirstInteger = null,
+                    SecondInteger = null,
+                    PresentationId = 1
                 });
         }
+
     }
 }
