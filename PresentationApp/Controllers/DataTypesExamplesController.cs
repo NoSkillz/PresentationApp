@@ -43,7 +43,7 @@ namespace PresentationApp.Controllers
         }
 
         // GET: DataTypesExamples/Create
-        public ActionResult Create()
+        public ActionResult Create(int presentationId)
         {
             return View();
         }
@@ -59,7 +59,7 @@ namespace PresentationApp.Controllers
             {
                 db.Examples.Add(dataTypesExample);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { Id = dataTypesExample.PresentationId });
             }
 
             return View(dataTypesExample);
@@ -91,7 +91,7 @@ namespace PresentationApp.Controllers
             {
                 db.Entry(dataTypesExample).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { Id = dataTypesExample.Id });
             }
             return View(dataTypesExample);
         }
