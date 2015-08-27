@@ -47,7 +47,7 @@ namespace PresentationApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Description,Date")] Presentation presentation)
+        public ActionResult Create([Bind(Include = "Name,Description,Date")] Presentation presentation)
         {
             if (ModelState.IsValid)
             {
