@@ -81,17 +81,14 @@ namespace PresentationApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Presentation presentation)
         {
-            //if (ModelState.IsValid)
-            //{
-            //    db.Entry(presentation).State = EntityState.Modified;
-            //    db.SaveChanges();
-            //    return RedirectToAction("Index");
-            //}
-            //return View(presentation);
-            //var result = BasicMath.Addition(presentation, 3);
+            if (ModelState.IsValid)
+            {
+                db.Entry(presentation).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
 
-            //return View();
-            return null;
+            return View(presentation);
         }
 
         // GET: Presentations/Delete/5
