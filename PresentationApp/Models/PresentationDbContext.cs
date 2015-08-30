@@ -20,6 +20,6 @@ namespace PresentationApp.Models
         }
 
         public DbSet<Presentation> Presentations { get; set; }
-        public DbSet<DataTypesExample> Examples { get; set; }
+        public DbSet<DataTypes> Examples { get; set; }
     }
 }

@@ -163,6 +163,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PresentationsController.cs" />
     <Compile Include="Controllers\ResultsController.cs" />
+    <Compile Include="ErrorHandling\ErrorHelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -175,7 +176,8 @@
       <DependentUpon>201508181736508_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\DataTypesExample.cs" />
+    <Compile Include="Models\BasicMathOps.cs" />
+    <Compile Include="Models\DataTypes.cs" />
     <Compile Include="Models\IExample.cs" />
     <Compile Include="Models\Presentation.cs" />
     <Compile Include="Models\PresentationDbContext.cs" />

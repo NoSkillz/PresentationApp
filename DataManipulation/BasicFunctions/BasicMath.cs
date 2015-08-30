@@ -29,6 +29,13 @@ namespace DataManipulation.BasicFunctions
             return result;
         }
 
+        //Decimal addition
+        public static decimal Addition(decimal firstNumber, decimal secondNumber)
+        {
+            var result = firstNumber + secondNumber;
+            return result;
+        }
+
         public static int Multiplication(int firstNumber, int secondNumber)
         {
             var result = firstNumber * secondNumber;

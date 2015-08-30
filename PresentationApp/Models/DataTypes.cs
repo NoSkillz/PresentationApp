@@ -6,7 +6,7 @@ using System.Web;
 
 namespace PresentationApp.Models
 {
-    public class DataTypesExample : IExample
+    public class DataTypes : IExample
     {
         public int Id { get; set; }
         public int? FirstInteger { get; set; }

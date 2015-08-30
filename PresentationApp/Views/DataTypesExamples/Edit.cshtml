@@ -1,4 +1,4 @@
-﻿@model PresentationApp.Models.DataTypesExample
+﻿@model PresentationApp.Models.DataTypes
 
 @{
     ViewBag.Title = "Edit";
@@ -11,7 +11,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>DataTypesExample</h4>
+        <h4>DataTypes</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)
@@ -64,9 +64,9 @@
             </div>
         </div>
 
-        <div class="form-group">
+        @*<div class="form-group">
             @Html.HiddenFor(model => model.PresentationId)
-        </div>
+        </div>*@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

@@ -41,7 +41,7 @@ namespace PresentationApp.Migrations
             context.Examples.AddOrUpdate(
                 p => p.Id,
                 // Examples for the first presentation
-                new DataTypesExample
+                new DataTypes
                 {
                     Id = 1,
                     FirstDouble = null,
@@ -52,7 +52,7 @@ namespace PresentationApp.Migrations
                     SecondInteger = null,
                     PresentationId = 1
                 },
-                new DataTypesExample
+                new DataTypes
                 {
                     Id = 2,
                     FirstDouble = null,
@@ -64,7 +64,7 @@ namespace PresentationApp.Migrations
                     PresentationId = 1
                 },
                 //Examples for the second presentation
-                new DataTypesExample
+                new DataTypes
                 {
                     Id = 3,
                     FirstDouble = null,

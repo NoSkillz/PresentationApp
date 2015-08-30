@@ -33,7 +33,7 @@ namespace PresentationApp.Controllers
             {
                 return HttpNotFound();
             }
-            return RedirectToAction("Index", "DataTypesExamples", new { presentationId = id });
+            return RedirectToAction("Index", "DataTypess", new { presentationId = id });
         }
 
         // GET: Presentations/Create

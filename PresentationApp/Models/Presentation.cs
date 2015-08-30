@@ -22,6 +22,6 @@ namespace PresentationApp.Models
         public DateTime Date { get; set; }
 
         // Virtual prop to link to Examples
-        public virtual ICollection<DataTypesExample> Examples { get; set; }
+        public virtual ICollection<DataTypes> Examples { get; set; }
     }
 }
