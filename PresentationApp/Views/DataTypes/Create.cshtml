@@ -75,5 +75,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index", new { id = Model.PresentationId })
+    @Html.ActionLink("Back to List", "Index", new { id = Request.QueryString.GetValues(0).First() })
 </div>

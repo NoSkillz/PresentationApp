@@ -11,11 +11,11 @@ using PresentationApp.ErrorHandling;
 
 namespace PresentationApp.Controllers
 {
-    public class DataTypessController : Controller
+    public class DataTypesController : Controller
     {
         private PresentationDbContext db = new PresentationDbContext();
 
-        // GET: DataTypess
+        // GET: DataTypes
         public ActionResult Index([Bind(Prefix = "Id")] int presentationId)
         {
             var presentation = db.Presentations.Find(presentationId);
@@ -28,7 +28,7 @@ namespace PresentationApp.Controllers
             return View(presentation);
         }
 
-        // GET: DataTypess/Details/5
+        // GET: DataTypes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -43,13 +43,13 @@ namespace PresentationApp.Controllers
             return View(DataTypes);
         }
 
-        // GET: DataTypess/Create
+        // GET: DataTypes/Create
         public ActionResult Create(int presentationId)
         {
             return View();
         }
 
-        // POST: DataTypess/Create
+        // POST: DataTypes/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -68,7 +68,7 @@ namespace PresentationApp.Controllers
             return View(DataTypes);
         }
 
-        // GET: DataTypess/Edit/5
+        // GET: DataTypes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -83,7 +83,7 @@ namespace PresentationApp.Controllers
             return View(DataTypes);
         }
 
-        // POST: DataTypess/Edit/5
+        // POST: DataTypes/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -99,7 +99,7 @@ namespace PresentationApp.Controllers
             return View(DataTypes);
         }
 
-        // GET: DataTypess/Delete/5
+        // GET: DataTypes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -114,7 +114,7 @@ namespace PresentationApp.Controllers
             return View(DataTypes);
         }
 
-        // POST: DataTypess/Delete/5
+        // POST: DataTypes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

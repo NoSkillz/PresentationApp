@@ -159,7 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\DataTypesExamplesController.cs" />
+    <Compile Include="Controllers\DataTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PresentationsController.cs" />
     <Compile Include="Controllers\ResultsController.cs" />
@@ -192,12 +192,12 @@
     <Content Include="Views\Presentations\Delete.cshtml" />
     <Content Include="Views\Presentations\Edit.cshtml" />
     <Content Include="Views\Presentations\Index.cshtml" />
-    <Content Include="Views\DataTypesExamples\Create.cshtml" />
-    <Content Include="Views\DataTypesExamples\Delete.cshtml" />
-    <Content Include="Views\DataTypesExamples\Details.cshtml" />
-    <Content Include="Views\DataTypesExamples\Edit.cshtml" />
-    <Content Include="Views\DataTypesExamples\Index.cshtml" />
-    <Content Include="Views\DataTypesExamples\_DataTypesExamples.cshtml" />
+    <Content Include="Views\DataTypes\Create.cshtml" />
+    <Content Include="Views\DataTypes\Delete.cshtml" />
+    <Content Include="Views\DataTypes\Details.cshtml" />
+    <Content Include="Views\DataTypes\Edit.cshtml" />
+    <Content Include="Views\DataTypes\Index.cshtml" />
+    <Content Include="Views\DataTypes\_DataTypes.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
