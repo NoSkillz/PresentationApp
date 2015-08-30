@@ -16,6 +16,6 @@ textarea {
     max-width: 280px;
 }
 
-.ui-datepicker {
+#ui-datepicker-div {
     font-size: 12px;
 }

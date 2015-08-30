@@ -26,14 +26,14 @@ namespace PresentationApp.Migrations
                     Id = 1,
                     Name = "Test",
                     Description = "Desc",
-                    Date = DateTime.Now
+                    Date = DateTime.Now.Date
                 },
                 new Presentation
                 {
                     Id = 2,
                     Name = "Second Presentation",
                     Description = "The description for the second presentation",
-                    Date = DateTime.Now
+                    Date = DateTime.Now.Date
                 }
                 );
 

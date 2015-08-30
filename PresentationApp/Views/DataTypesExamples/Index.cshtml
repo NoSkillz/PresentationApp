@@ -10,6 +10,10 @@
     @Html.ActionLink("Create New", "Create", new { presentationId = Model.Id })
 </p>
 
+<p>
+    @Html.ActionLink("Back to list", "Index", "Presentations")
+</p>
+
 
 @Html.Partial("_DataTypesExamples", Model.Examples)
 

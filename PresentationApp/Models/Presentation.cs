@@ -17,8 +17,8 @@ namespace PresentationApp.Models
         public string Description { get; set; }
 
         [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true)]
-        [DisplayName("Date presented")]
+        //[DisplayFormat(ApplyFormatInEditMode = true)]
+        //[DisplayName("Date presented")]
         public DateTime Date { get; set; }
 
         // Virtual prop to link to Examples
