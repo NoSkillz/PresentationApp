@@ -44,35 +44,28 @@ namespace PresentationApp.Migrations
                 new DataTypes
                 {
                     Id = 1,
-                    FirstDouble = null,
-                    SecondDouble = null,
-                    FirstFloat = null,
-                    SecondFloat = null,
-                    FirstInteger = null,
-                    SecondInteger = null,
+                    Double = null,
+                    Float = null,
+                    Decimal = null,
+                    Integer = null,
                     PresentationId = 1
                 },
                 new DataTypes
                 {
                     Id = 2,
-                    FirstDouble = null,
-                    SecondDouble = null,
-                    FirstFloat = null,
-                    SecondFloat = null,
-                    FirstInteger = null,
-                    SecondInteger = null,
+                    Double = null,
+                    Float = null,
+                    Decimal = null,
+                    Integer = null,
                     PresentationId = 1
                 },
                 //Examples for the second presentation
                 new DataTypes
                 {
-                    Id = 3,
-                    FirstDouble = null,
-                    SecondDouble = null,
-                    FirstFloat = null,
-                    SecondFloat = null,
-                    FirstInteger = null,
-                    SecondInteger = null,
+                    Double = null,
+                    Float = null,
+                    Decimal = null,
+                    Integer = null,
                     PresentationId = 2
                 });
         }

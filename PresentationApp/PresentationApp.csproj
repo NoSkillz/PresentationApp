@@ -176,7 +176,6 @@
       <DependentUpon>201508181736508_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\BasicMathOps.cs" />
     <Compile Include="Models\DataTypes.cs" />
     <Compile Include="Models\IExample.cs" />
     <Compile Include="Models\Presentation.cs" />

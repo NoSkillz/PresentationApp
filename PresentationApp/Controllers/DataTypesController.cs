@@ -54,18 +54,21 @@ namespace PresentationApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstInteger,SecondInteger,FirstDouble,SecondDouble,FirstFloat,SecondFloat,PresentationId")] DataTypes DataTypes)
+        public ActionResult Create(DataTypes DataTypes)
         {
             var errors = ModelState.GetErrors();
+            db.Examples.Add(DataTypes);
+            db.SaveChanges();
+            return RedirectToAction("Index", new { id = DataTypes.PresentationId });
 
-            if (ModelState.IsValid)
-            {
-                db.Examples.Add(DataTypes);
-                db.SaveChanges();
-                return RedirectToAction("Index", new { Id = DataTypes.PresentationId });
-            }
+            //if (ModelState.IsValid)
+            //{
+            //    db.Examples.Add(DataTypes);
+            //    db.SaveChanges();
+            //    return RedirectToAction("Index", new { Id = DataTypes.PresentationId });
+            //}
 
-            return View(DataTypes);
+            //return View(DataTypes);
         }
 
         // GET: DataTypes/Edit/5
@@ -88,7 +91,7 @@ namespace PresentationApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstInteger,SecondInteger,FirstDouble,SecondDouble,FirstFloat,SecondFloat,PresentationId")] DataTypes DataTypes)
+        public ActionResult Edit(DataTypes DataTypes)
         {
             if (ModelState.IsValid)
             {

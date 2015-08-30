@@ -21,5 +21,11 @@ namespace PresentationApp.Models
 
         public DbSet<Presentation> Presentations { get; set; }
         public DbSet<DataTypes> Examples { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<DataTypes>().Property(d => d.Decimal).HasPrecision(18, 10);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

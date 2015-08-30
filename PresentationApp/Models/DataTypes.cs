@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -9,12 +10,12 @@ namespace PresentationApp.Models
     public class DataTypes : IExample
     {
         public int Id { get; set; }
-        public int? FirstInteger { get; set; }
-        public int? SecondInteger { get; set; }
-        public double? FirstDouble { get; set; }
-        public double? SecondDouble { get; set; }
-        public float? FirstFloat { get; set; }
-        public float? SecondFloat { get; set; }
+        public int? Integer { get; set; }
+        public double? Double { get; set; }
+        public float? Float { get; set; }
+        public decimal? Decimal { get; set; }
+        [Column(TypeName = "Money")]
+        public decimal? Money { get; set; }
       
         // FK to Presentations
         public int PresentationId { get; set; }

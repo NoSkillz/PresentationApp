@@ -15,50 +15,41 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.FirstInteger, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Integer, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.FirstInteger, new { @class = "form-control" })
+                @Html.TextBoxFor(model => model.Integer, new { @class = "form-control" })
                 @*@Html.ValidationMessageFor(model => model.FirstInteger, "", new { @class = "text-danger" })*@
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.SecondInteger, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Double, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.SecondInteger, new { @class = "form-control" })
+                @Html.TextBoxFor(model => model.Double, new { @class = "form-control" })
                 @*@Html.ValidationMessageFor(model => model.SecondInteger, "", new { @class = "text-danger" })*@
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.FirstDouble, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Decimal, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.FirstDouble, new { @class = "form-control" })
+                @Html.TextBoxFor(model => model.Decimal, new { @class = "form-control" })
                 @*@Html.ValidationMessageFor(model => model.FirstDouble, "", new { @class = "text-danger" })*@
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.SecondDouble, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Float, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.SecondDouble, new { @class = "form-control" })
+                @Html.TextBoxFor(model => model.Float, new { @class = "form-control" })
                 @*@Html.ValidationMessageFor(model => model.SecondDouble, "", new { @class = "text-danger" })*@
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.FirstFloat, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Money, htmlAttributes: new { @class = "control-label col-md-2"})
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.FirstFloat, new { @class = "form-control" })
-                @*@Html.ValidationMessageFor(model => model.FirstFloat, "", new { @class = "text-danger" })*@
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.SecondFloat, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(model => model.SecondFloat, new { @class = "form-control" })
-                @*@Html.ValidationMessageFor(model => model.SecondFloat, "", new { @class = "text-danger" })*@
+                @Html.TextBoxFor(model => model.Money, new { @class = "form-control" })
             </div>
         </div>
 
