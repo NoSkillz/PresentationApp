@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationApp.Tests", "Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManipulation", "DataManipulation\DataManipulation.csproj", "{4D8B560D-C76A-4616-8BC3-F93A1F55C869}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleExamples", "ConsoleExamples\ConsoleExamples.csproj", "{FB1201A4-65A3-4CFA-AA21-4D92E76BEBC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4D8B560D-C76A-4616-8BC3-F93A1F55C869}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D8B560D-C76A-4616-8BC3-F93A1F55C869}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D8B560D-C76A-4616-8BC3-F93A1F55C869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB1201A4-65A3-4CFA-AA21-4D92E76BEBC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB1201A4-65A3-4CFA-AA21-4D92E76BEBC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB1201A4-65A3-4CFA-AA21-4D92E76BEBC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB1201A4-65A3-4CFA-AA21-4D92E76BEBC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
